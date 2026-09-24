@@ -21,13 +21,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..500,0..100,0..1&family=Instrument+Serif:ital@0;1&display=swap">
-  <link rel="stylesheet" href="../assets/css/style.css?v=19">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20">
   <script>
     document.documentElement.classList.add('js');
     // Filet de sécurité : si le script principal ne se charge pas, tout le contenu reste visible.
     setTimeout(function () { if (!window.siteReady) document.documentElement.classList.remove('js'); }, 3000);
   </script>
-  <script src="../assets/js/main.js?v=19" defer></script>
+  <script src="../assets/js/main.js?v=20" defer></script>
 </head>
 <body>
   <svg class="sprite" aria-hidden="true" focusable="false">
@@ -48,6 +48,7 @@
         <span data-roll>Séquoria</span>
       </a>
       <div class="nav__side nav__side--end">
+        <a class="nav__link" href="../tarifs/" data-roll>Les tarifs</a>
         <a class="nav__link" href="../contact/" data-roll>Contact</a>
         <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
           <span class="nav__dots" aria-hidden="true"><i></i><i></i><i></i></span>
@@ -62,9 +63,10 @@
         <li style="--i:0"><a class="menu__link" href="../"><span class="menu__num">01</span><span class="menu__label">Accueil</span></a></li>
         <li style="--i:1"><a class="menu__link" href="../litiere-chevaux/"><span class="menu__num">02</span><span class="menu__label">Litière chevaux</span></a></li>
         <li style="--i:2"><a class="menu__link" href="../litiere-nac/"><span class="menu__num">03</span><span class="menu__label">Litière petits animaux</span></a></li>
-        <li style="--i:3"><a class="menu__link" href="../#usage"><span class="menu__num">04</span><span class="menu__label">Mode d’emploi</span></a></li>
-        <li style="--i:4"><a class="menu__link" href="../#faq"><span class="menu__num">05</span><span class="menu__label">Questions fréquentes</span></a></li>
-        <li style="--i:5"><a class="menu__link" href="../contact/"><span class="menu__num">06</span><span class="menu__label">Demander un devis</span></a></li>
+        <li style="--i:3"><a class="menu__link" href="../tarifs/"><span class="menu__num">04</span><span class="menu__label">Les tarifs</span></a></li>
+        <li style="--i:4"><a class="menu__link" href="../#usage"><span class="menu__num">05</span><span class="menu__label">Mode d’emploi</span></a></li>
+        <li style="--i:5"><a class="menu__link" href="../#faq"><span class="menu__num">06</span><span class="menu__label">Questions fréquentes</span></a></li>
+        <li style="--i:6"><a class="menu__link" href="../contact/"><span class="menu__num">07</span><span class="menu__label">Demander un devis</span></a></li>
       </ol>
       <div class="menu__foot">
         <p>Du carton au box, <em>du box au champ.</em></p>
@@ -265,6 +267,7 @@
           <ul>
             <li><a href="../litiere-chevaux/" data-roll>Litière chevaux</a></li>
             <li><a href="../litiere-nac/" data-roll>Petits animaux</a></li>
+            <li><a href="../tarifs/" data-roll>Les tarifs</a></li>
             <li><a href="../#usage" data-roll>Mode d’emploi</a></li>
             <li><a href="../#faq" data-roll>Questions</a></li>
           </ul>

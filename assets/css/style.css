@@ -2244,6 +2244,141 @@ select.input {
   .spec-list > div { grid-template-columns: minmax(0, 1fr); gap: 4px; }
 }
 
+/* ---------- 18c. Grille tarifaire ---------- */
+.pricing {
+  padding: clamp(20px, 3vw, 40px);
+  border: 1px solid var(--color-driftwood);
+  border-radius: var(--radius);
+}
+
+.pricing__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+.pricing__table th,
+.pricing__table td {
+  padding: 18px 16px;
+  border-top: 1px solid var(--color-driftwood);
+  font-weight: 400;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.pricing__table thead th {
+  padding-top: 0;
+  border-top: 0;
+  font-size: var(--text-label);
+  color: var(--color-ash-mauve);
+}
+
+.pricing__table abbr { text-decoration: none; }
+
+.pricing__table tbody th,
+.pricing__table td {
+  font-family: var(--font-display);
+  font-size: var(--text-heading-sm);
+  line-height: 1.15;
+  letter-spacing: -.02em;
+}
+
+.pricing__table td:nth-child(3) { color: var(--color-peacock-teal); }
+
+.pricing__table tbody tr { transition: background-color .4s var(--ease-out); }
+.pricing__table tbody tr:hover { background: var(--color-oat-milk); }
+.pricing__table tbody tr.is-best { background: rgb(47 90 64 / .07); }
+.pricing__table .tag { margin-left: 8px; vertical-align: middle; }
+
+.badge {
+  display: inline-flex;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgb(14 99 79 / .1);
+  color: var(--color-peacock-teal);
+  font-family: var(--font-text);
+  font-size: var(--text-label);
+  letter-spacing: 0;
+}
+
+.pricing__none { color: var(--color-driftwood); }
+
+/* Barre proportionnelle au prix du kg : la baisse se lit d'un coup d'œil. */
+.price-bar {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  max-width: 120px;
+  height: 3px;
+  margin-top: 8px;
+  border-radius: 2px;
+  background: var(--color-driftwood);
+}
+
+.price-bar::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color-peacock-teal);
+  transform: scaleX(var(--v, 1));
+  transform-origin: left;
+  transition: transform 1s var(--ease-out) calc(var(--r, 0) * 90ms + .25s);
+}
+
+.js .pricing:not(.is-in) .price-bar::after { transform: scaleX(0); }
+
+.pricing__note {
+  margin-top: 20px;
+  font-size: var(--text-caption);
+  color: var(--color-ash-mauve);
+}
+
+/* Sur mobile, chaque ligne devient une petite carte. */
+@media (max-width: 720px) {
+  .pricing { padding: 8px 16px 20px; }
+
+  .pricing__table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  .pricing__table tbody tr {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px 12px;
+    padding: 16px 8px;
+    border-top: 1px solid var(--color-driftwood);
+  }
+
+  .pricing__table tbody tr:first-child { border-top: 0; }
+
+  .pricing__table tbody th {
+    grid-column: 1 / -1;
+    padding: 0;
+    border: 0;
+  }
+
+  .pricing__table td {
+    padding: 0;
+    border: 0;
+    font-size: 1.25rem;
+  }
+
+  .pricing__table td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 4px;
+    font-family: var(--font-text);
+    font-size: var(--text-caption);
+    letter-spacing: 0;
+    color: var(--color-ash-mauve);
+  }
+}
+
 /* ---------- 19. Responsive ---------- */
 @media (max-width: 1100px) {
   .stats__grid,

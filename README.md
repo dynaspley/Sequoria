@@ -18,6 +18,7 @@ Puis ouvrir http://localhost:4173.
 | `/` | `index.html` | Accueil |
 | `/litiere-chevaux/` | `litiere-chevaux/index.html` | Fiche produit chevaux (sac de 20 kg) et estimateur de quantités |
 | `/litiere-nac/` | `litiere-nac/index.html` | Fiche produit petits animaux (sac de 2 kg) |
+| `/tarifs/` | `tarifs/index.html` | Grille tarifaire (litière chevaux) et tarifs petits animaux sur demande |
 | `/contact/` | `contact/index.html` | Formulaire de demande de devis |
 | `/mentions-legales/` | `mentions-legales/index.html` | Mentions légales |
 | `/confidentialite/` | `confidentialite/index.html` | Politique de confidentialité (RGPD) |
@@ -40,7 +41,7 @@ site.webmanifest         nom et icônes du site sur mobile
 ```
 
 La navigation, le menu et le pied de page sont répétés dans chaque page :
-une modification de ces blocs est à reporter dans les sept fichiers HTML.
+une modification de ces blocs est à reporter dans les huit fichiers HTML.
 
 ## À compléter avant la mise en ligne
 
