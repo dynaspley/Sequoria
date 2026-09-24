@@ -21,13 +21,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..500,0..100,0..1&family=Instrument+Serif:ital@0;1&display=swap">
-  <link rel="stylesheet" href="assets/css/style.css?v=18">
+  <link rel="stylesheet" href="assets/css/style.css?v=19">
   <script>
     document.documentElement.classList.add('js');
     // Filet de sécurité : si le script principal ne se charge pas, tout le contenu reste visible.
     setTimeout(function () { if (!window.siteReady) document.documentElement.classList.remove('js'); }, 3000);
   </script>
-  <script src="assets/js/main.js?v=18" defer></script>
+  <script src="assets/js/main.js?v=19" defer></script>
 </head>
 <body>
   <svg class="sprite" aria-hidden="true" focusable="false">
@@ -82,9 +82,6 @@
       </div>
       <div class="hero__veil" aria-hidden="true"></div>
       <div class="hero__inner container">
-        <div class="hero__top">
-          <p class="hero__kicker" data-hero-fade>Litière en carton recyclé pour chevaux</p>
-        </div>
         <div class="hero__main">
           <h1 class="hero__title">
             <span class="hero__line"><span class="hero__line-i">L’innovation</span></span>
@@ -94,45 +91,36 @@
           <div class="hero__aside">
             <p class="hero__lead" data-hero-fade>Séquoria transforme le carton d’emballage en une litière dépoussiérée et ultra‑absorbante. Des box plus sains, moins de corvées, et un fumier qui retourne vite à la terre.</p>
             <div class="hero__actions" data-hero-fade>
-              <a class="btn btn--primary" href="contact/" data-magnetic>
-                <span class="btn__label" data-roll>Demander un devis</span>
+              <a class="btn btn--primary" href="litiere-chevaux/" data-magnetic>
+                <span class="btn__label" data-roll>Découvrir le produit</span>
                 <span class="btn__icon" aria-hidden="true"><svg><use href="#i-arrow"/></svg><svg><use href="#i-arrow"/></svg></span>
               </a>
-              <a class="btn btn--ghost" href="#manifeste" data-magnetic>
-                <span class="btn__label" data-roll>Découvrir</span>
+              <a class="btn btn--ghost" href="contact/" data-magnetic>
+                <span class="btn__label" data-roll>Demander un devis</span>
               </a>
             </div>
           </div>
-        </div>
-        <div class="hero__foot" data-hero-fade>
-          <a class="hero__scroll" href="#manifeste"><span class="hero__scroll-line" aria-hidden="true"></span>Défiler</a>
         </div>
       </div>
     </section>
 
     <div class="sheet">
-      <!-- ============ 01 — Manifeste ============ -->
+      <!-- ============ 01 — Séquoria en bref ============ -->
       <section class="section manifesto" id="manifeste">
-        <div class="container container--narrow center">
-          <p class="kicker" data-reveal><span>01</span>Séquoria en bref</p>
-          <h2 class="heading-lg statement" data-fill>Nous donnons une seconde vie au carton d’emballage en le transformant en une litière <mark>saine pour vos chevaux</mark>, <mark>simple pour vos écuries</mark> et <mark>bonne pour la terre</mark>.</h2>
-          <p class="manifesto__text" data-reveal>Du carton trié, découpé en copeaux puis dépoussiéré&nbsp;: une matière toute simple, qui fait mieux que la paille là où ça compte.</p>
-          <p class="manifesto__more" data-reveal><a class="link" href="#matiere">Voir comment elle est fabriquée <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
-        </div>
-      </section>
-
-      <!-- ============ Le produit ============ -->
-      <section class="showcase" aria-label="Le sac Séquoria">
         <div class="container">
-          <figure class="showcase__figure" data-showcase>
-            <div class="showcase__frame">
-              <img class="showcase__img" src="assets/img/photos/sequoria-sac-ecurie.jpg" alt="Un sac de litière Séquoria de 20 kg posé dans une écurie, un cheval à la porte de son box" width="1407" height="768" loading="lazy" decoding="async">
+          <div class="intro-card">
+            <figure class="photo intro-card__photo" data-photo>
+              <div class="photo__media" data-speed="-0.04">
+                <img src="assets/img/photos/sequoria-sac-ecurie.jpg" alt="Un sac de litière Séquoria de 20 kg posé dans une écurie, un cheval à la porte de son box" width="1407" height="768" loading="lazy" decoding="async">
+              </div>
+            </figure>
+            <div class="intro-card__content">
+              <p class="kicker" data-reveal><span>01</span>Séquoria en bref</p>
+              <h2 class="heading-lg statement" data-fill>Nous donnons une seconde vie au carton d’emballage en le transformant en une litière <mark>saine pour vos chevaux</mark>, <mark>simple pour vos écuries</mark> et <mark>bonne pour la terre</mark>.</h2>
+              <p class="manifesto__text" data-reveal>Du carton trié, découpé en copeaux puis dépoussiéré&nbsp;: une matière toute simple, qui fait mieux que la paille là où ça compte.</p>
+              <p class="manifesto__more" data-reveal><a class="link" href="#matiere">Voir comment elle est fabriquée <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
             </div>
-            <figcaption class="showcase__cap" data-reveal>
-              <a class="link" href="litiere-chevaux/">Découvrir la litière chevaux <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-              <span>Absorption rapide · Dépoussiérée · Compostable · 20&nbsp;kg</span>
-            </figcaption>
-          </figure>
+          </div>
         </div>
       </section>
 

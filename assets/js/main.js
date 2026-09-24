@@ -410,28 +410,6 @@
     });
   }
 
-  /* Vitrine produit : la photo s'ouvre en grand à mesure qu'elle approche du centre. */
-  function initShowcase() {
-    if (reduceMotion) return;
-    $$('[data-showcase]').forEach((figure) => {
-      let top = 0;
-      let height = 0;
-      let last = -1;
-      measures.add(() => {
-        top = pageTop(figure);
-        height = figure.offsetHeight;
-      });
-      tickers.add(() => {
-        const start = top - scroll.vh;
-        const end = top + height / 2 - scroll.vh / 2;
-        const p = clamp((scroll.y - start) / (end - start));
-        if (p === last) return;
-        last = p;
-        figure.style.setProperty('--sp', p.toFixed(4));
-      });
-    });
-  }
-
   /* Parallaxe légère sur les éléments [data-speed]. */
   function initParallax() {
     if (reduceMotion) return;
@@ -522,24 +500,11 @@
   }
 
   /* ------------------------------------------------------------------------
-     Navigation : masquée en descendant, lien actif, menu plein écran.
+     Navigation : barre toujours visible, lien actif, menu plein écran.
      ------------------------------------------------------------------------ */
   function initNav() {
     const nav = $('[data-nav]');
     if (!nav) return;
-
-    let lastY = window.scrollY;
-    let hidden = false;
-    tickers.add(() => {
-      const delta = scroll.y - lastY;
-      if (Math.abs(delta) < 8) return;
-      const hide = delta > 0 && scroll.y > scroll.vh * 0.9 && !root.classList.contains('menu-open');
-      if (hide !== hidden) {
-        hidden = hide;
-        nav.classList.toggle('is-hidden', hide);
-      }
-      lastY = scroll.y;
-    });
 
     const sections = new Map();
     $$('.nav__link', nav).forEach((link) => {
@@ -902,7 +867,6 @@
     initHero();
     initFill();
     initMarquee();
-    initShowcase();
     initParallax();
     initUsage();
     initFooter();

@@ -420,11 +420,9 @@ mark {
   justify-content: center;
   padding-inline: 16px;
   pointer-events: none;
-  transition: transform .7s var(--ease-out);
 }
 
-.nav.is-hidden { transform: translateY(calc(-100% - 20px)); }
-.nav:has(:focus-visible) { transform: none; }
+/* La barre reste visible en permanence pendant le défilement. */
 
 .nav__pill {
   pointer-events: auto;
@@ -434,7 +432,7 @@ mark {
   gap: 28px;
   padding: 6px;
   border: 1px solid rgb(31 58 43 / .1);
-  border-radius: var(--radius-sm);
+  border-radius: 999px;
   background: rgb(221 233 214 / .7);
   -webkit-backdrop-filter: blur(16px) saturate(1.2);
   backdrop-filter: blur(16px) saturate(1.2);
@@ -450,7 +448,7 @@ mark {
   align-items: center;
   justify-content: flex-end;
   gap: 24px;
-  padding-left: 18px;
+  padding-left: 22px;
 }
 
 .nav__side--end {
@@ -501,7 +499,7 @@ mark {
   width: 40px;
   height: 40px;
   border: 1px solid rgb(31 58 43 / .25);
-  border-radius: var(--radius-sm);
+  border-radius: 50%;
   color: var(--color-forest);
   transition:
     background-color .4s var(--ease-out),
@@ -705,27 +703,10 @@ main {
   min-height: 100vh;
   min-height: 100svh;
   display: grid;
-  grid-template-rows: auto 1fr auto;
-  row-gap: 28px;
-  padding-block: 104px 28px;
+  grid-template-rows: minmax(0, 1fr);
+  padding-block: 104px 64px;
   transform: translate3d(0, calc(var(--hp, 0) * -8vh), 0) scale(calc(1 - var(--hp, 0) * .06));
   transform-origin: 50% 100%;
-}
-
-.hero__top {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 24px;
-  color: var(--hero-ink-soft);
-}
-
-.hero__kicker {
-  max-width: 17em;
-  font-size: var(--text-caption);
-  line-height: 1.5;
-  letter-spacing: .09em;
-  text-transform: uppercase;
 }
 
 /* Titre et texte remontés au centre de l'écran, dans la moitié gauche. */
@@ -776,42 +757,6 @@ main {
   margin-top: 28px;
 }
 
-.hero__foot {
-  display: flex;
-  align-items: center;
-  font-size: var(--text-label);
-}
-
-.hero__scroll {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  color: var(--hero-ink);
-  text-decoration: none;
-}
-
-.hero__scroll-line {
-  position: relative;
-  width: 44px;
-  height: 1px;
-  overflow: hidden;
-  background: var(--hero-rule);
-}
-
-.hero__scroll-line::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--hero-ink);
-  animation: scroll-cue 2.4s var(--ease-in-out) infinite;
-}
-
-@keyframes scroll-cue {
-  0% { transform: translateX(-100%); }
-  55% { transform: translateX(0); }
-  100% { transform: translateX(101%); }
-}
-
 /* Entrée du hero, déclenchée par le JS une fois les polices prêtes. */
 .js .hero__line-i {
   transform: translate3d(0, 112%, 0) rotate(4deg);
@@ -843,7 +788,6 @@ main {
 
 .js .hero__lead { transition-delay: .8s; }
 .js .hero__actions { transition-delay: .92s; }
-.js .hero__foot { transition-delay: 1.05s; }
 
 .is-loaded [data-hero-fade] {
   opacity: 1;
@@ -906,50 +850,48 @@ main {
   margin: 0 auto clamp(32px, 4vw, 52px);
 }
 
-/* ---------- 8. Manifeste ---------- */
+/* ---------- 8. Séquoria en bref ---------- */
 .manifesto { padding-top: clamp(56px, 6vw, 88px); }
-
-.statement { margin-inline: auto; }
 .js .fw { opacity: .14; }
 
+/* Carte aux coins arrondis : la photo du sac à gauche, le texte à droite. */
+.intro-card {
+  --card-radius: clamp(18px, 2.4vw, 32px);
+  --card-pad: clamp(12px, 1.6vw, 20px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(28px, 4vw, 64px);
+  padding: var(--card-pad);
+  border-radius: var(--card-radius);
+  background: var(--color-oat-milk);
+}
+
+.intro-card__photo {
+  aspect-ratio: 3 / 2;
+  border-radius: calc(var(--card-radius) - var(--card-pad));
+}
+
+.intro-card__content { padding: clamp(8px, 2vw, 32px) clamp(8px, 2.4vw, 40px) clamp(8px, 2vw, 32px) 0; }
+
+.intro-card .statement {
+  font-size: clamp(1.75rem, 2.7vw, 2.5rem);
+  line-height: 1.02;
+}
+
 .manifesto__text {
-  max-width: 540px;
-  margin: 32px auto 24px;
+  max-width: 460px;
+  margin: 24px 0 20px;
   color: var(--color-ash-mauve);
   text-wrap: pretty;
 }
 
-/* ---------- 8b. Vitrine produit ---------- */
-.showcase { padding-bottom: var(--section-pad); }
-
-/* --sp : progression (0 → 1) calculée au défilement ; la photo s'ouvre en grand. */
-.showcase__frame {
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: 1407 / 768;
-  border-radius: var(--radius);
-  background: var(--color-oat-milk);
-  clip-path: inset(calc((1 - var(--sp, 1)) * 7%) calc((1 - var(--sp, 1)) * 13%) round var(--radius));
+@media (max-width: 900px) {
+  .intro-card { grid-template-columns: minmax(0, 1fr); }
+  .intro-card__content { padding: 8px 8px 20px; }
 }
 
-.showcase__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(calc(1.16 - var(--sp, 1) * .16));
-  transform-origin: 50% 60%;
-}
-
-.showcase__cap {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 8px 24px;
-  padding-top: 16px;
-  font-size: var(--text-label);
-  color: var(--color-ash-mauve);
-}
-
+/* ---------- 8b. Photos ---------- */
 /* Photos : cadre arrondi, apparition par le bas, légère parallaxe interne. */
 .photo {
   position: relative;
@@ -2326,7 +2268,7 @@ select.input {
   .nav__pill {
     grid-template-columns: auto auto;
     gap: 20px;
-    padding-left: 16px;
+    padding-left: 22px;
   }
 
   .audience__item {
