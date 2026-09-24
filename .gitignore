@@ -1,0 +1,5 @@
+# Fichiers système macOS
+.DS_Store
+
+# Réglages locaux de Claude Code (aperçu du site)
+.claude/

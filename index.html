@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Séquoria — Litière en carton recyclé pour chevaux et petits animaux</title>
+  <meta name="description" content="Séquoria transforme le carton d’emballage en une litière dépoussiérée, ultra-absorbante et compostable, pour les chevaux et les petits animaux (NAC).">
+  <meta name="theme-color" content="#dde9d8">
+  <link rel="canonical" href="https://www.example.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Séquoria">
+  <meta property="og:title" content="Séquoria — Litière en carton recyclé pour chevaux et petits animaux">
+  <meta property="og:description" content="Séquoria transforme le carton d’emballage en une litière dépoussiérée, ultra-absorbante et compostable, pour les chevaux et les petits animaux (NAC).">
+  <meta property="og:url" content="https://www.example.com/">
+  <meta property="og:image" content="https://www.example.com/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..500,0..100,0..1&family=Instrument+Serif:ital@0;1&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css?v=18">
+  <script>
+    document.documentElement.classList.add('js');
+    // Filet de sécurité : si le script principal ne se charge pas, tout le contenu reste visible.
+    setTimeout(function () { if (!window.siteReady) document.documentElement.classList.remove('js'); }, 3000);
+  </script>
+  <script src="assets/js/main.js?v=18" defer></script>
+</head>
+<body>
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow" viewBox="0 0 16 16"><path d="M2.5 8h11M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-wave" viewBox="0 0 40 20"><path d="M2 10C4.9 3 8.1 3 11 10s6.1 7 9 0 6.1-7 9 0 6.1 7 9 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <!-- ============ Navigation flottante ============ -->
+  <header class="nav" data-nav>
+    <nav class="nav__pill" aria-label="Navigation principale">
+      <div class="nav__side">
+        <a class="nav__link" href="litiere-chevaux/" data-roll>Chevaux</a>
+        <a class="nav__link" href="litiere-nac/" data-roll>Petits animaux</a>
+      </div>
+      <a class="nav__brand" href="#top" aria-label="Séquoria, retour à l’accueil">
+        <span data-roll>Séquoria</span>
+      </a>
+      <div class="nav__side nav__side--end">
+        <a class="nav__link" href="contact/" data-roll>Contact</a>
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
+          <span class="nav__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="menu" id="menu" hidden>
+    <div class="menu__inner container">
+      <ol class="menu__list">
+        <li style="--i:0"><a class="menu__link" href="#top"><span class="menu__num">01</span><span class="menu__label">Accueil</span></a></li>
+        <li style="--i:1"><a class="menu__link" href="litiere-chevaux/"><span class="menu__num">02</span><span class="menu__label">Litière chevaux</span></a></li>
+        <li style="--i:2"><a class="menu__link" href="litiere-nac/"><span class="menu__num">03</span><span class="menu__label">Litière petits animaux</span></a></li>
+        <li style="--i:3"><a class="menu__link" href="#usage"><span class="menu__num">04</span><span class="menu__label">Mode d’emploi</span></a></li>
+        <li style="--i:4"><a class="menu__link" href="#faq"><span class="menu__num">05</span><span class="menu__label">Questions fréquentes</span></a></li>
+        <li style="--i:5"><a class="menu__link" href="contact/"><span class="menu__num">06</span><span class="menu__label">Demander un devis</span></a></li>
+      </ol>
+      <div class="menu__foot">
+        <p>Du carton au box, <em>du box au champ.</em></p>
+        <a class="link link--light" href="mailto:contact@example.com">contact@example.com</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="contenu">
+    <!-- ============ Hero ============ -->
+    <section class="hero" id="top" data-hero>
+      <canvas class="hero__canvas" data-ribbon="hero" aria-hidden="true"></canvas>
+      <div class="hero__visual">
+        <img src="assets/img/photos/sequoria-cheval-copeaux.jpg" alt="Un cheval alezan dans son box, sur une épaisse litière de copeaux de carton" width="1264" height="843" fetchpriority="high" decoding="async">
+      </div>
+      <div class="hero__veil" aria-hidden="true"></div>
+      <div class="hero__inner container">
+        <div class="hero__top">
+          <p class="hero__kicker" data-hero-fade>Litière en carton recyclé pour chevaux</p>
+        </div>
+        <div class="hero__main">
+          <h1 class="hero__title">
+            <span class="hero__line"><span class="hero__line-i">L’innovation</span></span>
+            <span class="hero__line"><span class="hero__line-i">carton,</span></span>
+            <span class="hero__line hero__line--accent"><em class="hero__line-i">l’esprit nature</em></span>
+          </h1>
+          <div class="hero__aside">
+            <p class="hero__lead" data-hero-fade>Séquoria transforme le carton d’emballage en une litière dépoussiérée et ultra‑absorbante. Des box plus sains, moins de corvées, et un fumier qui retourne vite à la terre.</p>
+            <div class="hero__actions" data-hero-fade>
+              <a class="btn btn--primary" href="contact/" data-magnetic>
+                <span class="btn__label" data-roll>Demander un devis</span>
+                <span class="btn__icon" aria-hidden="true"><svg><use href="#i-arrow"/></svg><svg><use href="#i-arrow"/></svg></span>
+              </a>
+              <a class="btn btn--ghost" href="#manifeste" data-magnetic>
+                <span class="btn__label" data-roll>Découvrir</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="hero__foot" data-hero-fade>
+          <a class="hero__scroll" href="#manifeste"><span class="hero__scroll-line" aria-hidden="true"></span>Défiler</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="sheet">
+      <!-- ============ 01 — Manifeste ============ -->
+      <section class="section manifesto" id="manifeste">
+        <div class="container container--narrow center">
+          <p class="kicker" data-reveal><span>01</span>Séquoria en bref</p>
+          <h2 class="heading-lg statement" data-fill>Nous donnons une seconde vie au carton d’emballage en le transformant en une litière <mark>saine pour vos chevaux</mark>, <mark>simple pour vos écuries</mark> et <mark>bonne pour la terre</mark>.</h2>
+          <p class="manifesto__text" data-reveal>Du carton trié, découpé en copeaux puis dépoussiéré&nbsp;: une matière toute simple, qui fait mieux que la paille là où ça compte.</p>
+          <p class="manifesto__more" data-reveal><a class="link" href="#matiere">Voir comment elle est fabriquée <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+        </div>
+      </section>
+
+      <!-- ============ Le produit ============ -->
+      <section class="showcase" aria-label="Le sac Séquoria">
+        <div class="container">
+          <figure class="showcase__figure" data-showcase>
+            <div class="showcase__frame">
+              <img class="showcase__img" src="assets/img/photos/sequoria-sac-ecurie.jpg" alt="Un sac de litière Séquoria de 20 kg posé dans une écurie, un cheval à la porte de son box" width="1407" height="768" loading="lazy" decoding="async">
+            </div>
+            <figcaption class="showcase__cap" data-reveal>
+              <a class="link" href="litiere-chevaux/">Découvrir la litière chevaux <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <span>Absorption rapide · Dépoussiérée · Compostable · 20&nbsp;kg</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ============ Chiffres clés ============ -->
+      <!-- Chiffres indicatifs : à remplacer par les données réelles de votre produit. -->
+      <section class="stats" aria-labelledby="stats-title">
+        <div class="container">
+          <p class="kicker" id="stats-title" data-reveal>Séquoria en chiffres</p>
+          <ul class="stats__grid">
+            <li data-reveal style="--i:0">
+              <div class="stat">
+                <p class="stat__num"><span data-count="3">3</span><span class="stat__unit">×</span></p>
+                <p class="stat__label">plus absorbante que la paille&nbsp;: le box reste sec plus longtemps.</p>
+              </div>
+            </li>
+            <li data-reveal style="--i:1">
+              <div class="stat">
+                <p class="stat__num"><span data-count="100">100</span><span class="stat__unit">&nbsp;%</span></p>
+                <p class="stat__label">de carton recyclé, trié et débarrassé des agrafes et adhésifs.</p>
+              </div>
+            </li>
+            <li data-reveal style="--i:2">
+              <div class="stat">
+                <p class="stat__num"><span data-count="8">8</span><span class="stat__unit">&nbsp;sem.</span></p>
+                <p class="stat__label">environ pour un fumier composté, prêt à retourner aux champs.</p>
+              </div>
+            </li>
+            <li data-reveal style="--i:3">
+              <div class="stat">
+                <p class="stat__num"><span data-count="20">20</span><span class="stat__unit">&nbsp;kg</span></p>
+                <p class="stat__label">par balle compressée&nbsp;: facile à porter, à stocker et à étaler.</p>
+              </div>
+            </li>
+          </ul>
+          <p class="stats__note" data-reveal>Valeurs indicatives, variables selon l’usage et les conditions d’écurie.</p>
+        </div>
+      </section>
+
+      <!-- ============ Bandeau typographique ============ -->
+      <section class="band" aria-label="Les qualités de Séquoria">
+        <div class="band__row" data-marquee="-1" data-marquee-speed="36">
+          <div class="band__track">
+            <span class="band__item">Absorbante</span><svg class="band__sep" aria-hidden="true"><use href="#i-wave"/></svg>
+            <span class="band__item">Dépoussiérée</span><svg class="band__sep" aria-hidden="true"><use href="#i-wave"/></svg>
+            <span class="band__item">Compostable</span><svg class="band__sep" aria-hidden="true"><use href="#i-wave"/></svg>
+            <span class="band__item">Recyclée</span><svg class="band__sep" aria-hidden="true"><use href="#i-wave"/></svg>
+            <span class="band__item">Non appétente</span><svg class="band__sep" aria-hidden="true"><use href="#i-wave"/></svg>
+          </div>
+        </div>
+        <div class="band__row band__row--alt" data-marquee="1" data-marquee-speed="28">
+          <div class="band__track">
+            <span class="band__item"><em>Du carton au box, du box au champ</em></span><svg class="band__sep" aria-hidden="true"><use href="#i-wave"/></svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 02 — La matière ============ -->
+      <section class="section matiere" id="matiere">
+        <div class="container">
+          <header class="section-head center">
+            <p class="kicker" data-reveal><span>02</span>La matière</p>
+            <h2 class="heading-lg" data-split>Du carton d’emballage <mark>au box de votre cheval</mark>, en quatre étapes.</h2>
+          </header>
+          <!-- Visuels provisoires : remplacez les SVG par vos photos produit (format 3:4). -->
+          <div class="specimens">
+            <figure class="specimen" style="--i:0">
+              <div class="specimen__frame"><div class="specimen__media"><img class="specimen__img" src="assets/img/illustrations/specimen-cannelure.svg" alt="Gros plan sur la tranche d’une pile de cartons ondulés" width="600" height="800" loading="lazy"></div></div>
+              <figcaption class="specimen__cap"><span class="specimen__num">01</span><span class="specimen__title">Collecte</span><span class="specimen__text">Des cartons d’emballage propres, triés à la source.</span></figcaption>
+            </figure>
+            <figure class="specimen" style="--i:1" data-speed="-0.06">
+              <div class="specimen__frame"><div class="specimen__media"><img class="specimen__img" src="assets/img/illustrations/specimen-copeaux.svg" alt="Un tas de copeaux de carton" width="600" height="800" loading="lazy"></div></div>
+              <figcaption class="specimen__cap"><span class="specimen__num">02</span><span class="specimen__title">Découpe</span><span class="specimen__text">Le carton est taillé en copeaux de quelques centimètres.</span></figcaption>
+            </figure>
+            <figure class="specimen" style="--i:2">
+              <div class="specimen__frame"><div class="specimen__media"><img class="specimen__img" src="assets/img/illustrations/specimen-depoussierage.svg" alt="Copeaux de carton en suspension, débarrassés de leur poussière" width="600" height="800" loading="lazy"></div></div>
+              <figcaption class="specimen__cap"><span class="specimen__num">03</span><span class="specimen__title">Dépoussiérage</span><span class="specimen__text">Un tamisage retire les particules fines&nbsp;: la litière respire.</span></figcaption>
+            </figure>
+            <figure class="specimen" style="--i:3" data-speed="-0.06">
+              <div class="specimen__frame"><div class="specimen__media"><img class="specimen__img" src="assets/img/illustrations/specimen-balle.svg" alt="Une balle de litière compressée et cerclée" width="600" height="800" loading="lazy"></div></div>
+              <figcaption class="specimen__cap"><span class="specimen__num">04</span><span class="specimen__title">Compression</span><span class="specimen__text">Les copeaux sont pressés en balles faciles à manier.</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 03 — Avantages ============ -->
+      <section class="section avantages" id="avantages">
+        <div class="container">
+          <header class="section-head center">
+            <p class="kicker" data-reveal><span>03</span>Pourquoi le carton</p>
+            <h2 class="heading-lg" data-split>Pensée pour le confort de vos chevaux, <mark>et pour votre dos</mark>.</h2>
+          </header>
+          <ul class="benefits">
+            <li data-reveal style="--i:0">
+              <article class="benefit">
+                <svg class="benefit__icon" viewBox="0 0 40 40" aria-hidden="true"><path pathLength="1" d="M5 15h19a5 5 0 1 0-5-5"/><path pathLength="1" d="M5 22h26a5 5 0 1 1-5 5"/><path pathLength="1" d="M5 29h12"/></svg>
+                <h3 class="benefit__title">Dépoussiérée</h3>
+                <p class="benefit__text">Tamisée pour éliminer les particules fines&nbsp;: un vrai plus pour les chevaux sensibles des voies respiratoires.</p>
+              </article>
+            </li>
+            <li data-reveal style="--i:1">
+              <article class="benefit">
+                <svg class="benefit__icon" viewBox="0 0 40 40" aria-hidden="true"><path pathLength="1" d="M20 5c6 8 11 14 11 20a11 11 0 0 1-22 0c0-6 5-12 11-20Z"/><path pathLength="1" d="M14.5 26a5.5 5.5 0 0 0 5.5 5.5"/></svg>
+                <h3 class="benefit__title">Ultra‑absorbante</h3>
+                <p class="benefit__text">Le carton boit l’urine et limite les odeurs d’ammoniac. Le box reste sec, les sabots aussi.</p>
+              </article>
+            </li>
+            <li data-reveal style="--i:2">
+              <article class="benefit">
+                <svg class="benefit__icon" viewBox="0 0 40 40" aria-hidden="true"><path pathLength="1" d="M8 13c4-3 20-3 24 0 3 4 3 10 0 14-4 3-20 3-24 0-3-4-3-10 0-14Z"/><path pathLength="1" d="M12 20h16"/></svg>
+                <h3 class="benefit__title">Confortable</h3>
+                <p class="benefit__text">Une couche souple et isolante, sans goût ni odeur attirante&nbsp;: vos chevaux s’y couchent, mais ne la mangent pas.</p>
+              </article>
+            </li>
+            <li data-reveal style="--i:3">
+              <article class="benefit">
+                <svg class="benefit__icon" viewBox="0 0 40 40" aria-hidden="true"><path pathLength="1" d="M20 34V17"/><path pathLength="1" d="M20 20c0-6.5 4-10.5 11-10.5 0 7-4 10.5-11 10.5Z"/><path pathLength="1" d="M20 25c0-5-3-8.5-9-8.5 0 5.5 3 8.5 9 8.5Z"/><path pathLength="1" d="M11 34h18"/></svg>
+                <h3 class="benefit__title">Compostable</h3>
+                <p class="benefit__text">Le fumier se décompose vite et nourrit prairies, cultures et potagers. Rien ne se perd.</p>
+              </article>
+            </li>
+          </ul>
+
+          <!-- Évaluation indicative : à valider avec vos propres essais. -->
+          <div class="compare" data-reveal>
+            <div class="compare__head">
+              <h3 class="heading-sm">Carton, paille ou copeaux de bois&nbsp;?</h3>
+              <p class="compare__note">Évaluation indicative, de 1 à 5.</p>
+            </div>
+            <table class="compare__table">
+              <thead>
+                <tr>
+                  <th scope="col"><span class="sr-only">Critère</span></th>
+                  <th scope="col" class="is-us"><span class="tag">Séquoria</span></th>
+                  <th scope="col">Paille</th>
+                  <th scope="col">Copeaux de bois</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Absorption</th>
+                  <td class="is-us"><span class="rating" data-v="5" role="img" aria-label="5 sur 5"><i></i><i></i><i></i><i></i><i></i></span></td>
+                  <td><span class="rating" data-v="2" role="img" aria-label="2 sur 5"><i></i><i></i><i></i><i></i><i></i></span></td>
+                  <td><span class="rating" data-v="3" role="img" aria-label="3 sur 5"><i></i><i></i><i></i><i></i><i></i></span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Peu de poussière</th>
+                  <td class="is-us"><span class="rating" data-v="5" role="img" aria-label="5 sur 5"><i></i><i></i><i></i><i></i><i></i></span></td>
+                  <td><span class="rating" data-v="2" role="img" aria-label="2 sur 5"><i></i><i></i><i></i><i></i><i></i></span></td>
+                  <td><span class="rating" data-v="3" role="img" aria-label="3 sur 5"><i></i><i></i><i></i><i></i><i></i></span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Non appétente</th>
+                  <td class="is-us"><span class="rating" data-v="5" role="img" aria-label="5 sur 5"><i></i><i></i><i></i><i></i><i></i></span></td>
+                  <td><span class="rating" data-v="1" role="img" aria-label="1 sur 5"><i></i><i></i><i></i><i></i><i></i></span></td>
+                  <td><span class="rating" data-v="5" role="img" aria-label="5 sur 5"><i></i><i></i><i></i><i></i><i></i></span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Compostage rapide</th>
+                  <td class="is-us"><span class="rating" data-v="5" role="img" aria-label="5 sur 5"><i></i><i></i><i></i><i></i><i></i></span></td>
+                  <td><span class="rating" data-v="4" role="img" aria-label="4 sur 5"><i></i><i></i><i></i><i></i><i></i></span></td>
+                  <td><span class="rating" data-v="2" role="img" aria-label="2 sur 5"><i></i><i></i><i></i><i></i><i></i></span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Moins de fumier</th>
+                  <td class="is-us"><span class="rating" data-v="4" role="img" aria-label="4 sur 5"><i></i><i></i><i></i><i></i><i></i></span></td>
+                  <td><span class="rating" data-v="1" role="img" aria-label="1 sur 5"><i></i><i></i><i></i><i></i><i></i></span></td>
+                  <td><span class="rating" data-v="3" role="img" aria-label="3 sur 5"><i></i><i></i><i></i><i></i><i></i></span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 04 — Mode d'emploi ============ -->
+      <section class="section usage" id="usage">
+        <div class="container">
+          <div class="usage__panel" data-usage>
+            <div class="usage__intro">
+              <header class="usage__head">
+                <p class="kicker kicker--light" data-reveal><span>04</span>Mode d’emploi</p>
+                <h2 class="display" data-split>Trois gestes, <em>un box sain.</em></h2>
+              </header>
+              <figure class="photo usage__photo" data-photo>
+                <div class="photo__media" data-speed="-0.05">
+                  <picture>
+                    <source type="image/avif" srcset="assets/img/photos/sequoria-box-cheval.avif">
+                    <img src="assets/img/photos/sequoria-box-cheval.jpg" alt="Un cheval bai dans un box paillé avec la litière en carton" width="1080" height="710" loading="lazy" decoding="async">
+                  </picture>
+                </div>
+              </figure>
+            </div>
+            <div class="usage__body">
+              <div class="usage__track" aria-hidden="true"><span class="usage__fill"></span></div>
+              <ol class="steps">
+                <li class="step">
+                  <span class="step__num" aria-hidden="true">1</span>
+                  <h3 class="step__title">Mise en place</h3>
+                  <p class="step__text">Émiettez 6 à 8 balles dans un box de 3&nbsp;×&nbsp;3&nbsp;m pour former une couche épaisse, en relevant les bords le long des murs.</p>
+                </li>
+                <li class="step">
+                  <span class="step__num" aria-hidden="true">2</span>
+                  <h3 class="step__title">Chaque jour</h3>
+                  <p class="step__text">Retirez crottins et zones mouillées. Le reste de la litière demeure sec et continue de servir.</p>
+                </li>
+                <li class="step">
+                  <span class="step__num" aria-hidden="true">3</span>
+                  <h3 class="step__title">Chaque semaine</h3>
+                  <p class="step__text">Complétez avec 1 à 2 balles selon le cheval et son temps passé au box. Les curages complets s’espacent.</p>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 05 — Pour qui ============ -->
+      <section class="section audience" id="pour-qui">
+        <div class="container">
+          <header class="section-head center">
+            <p class="kicker" data-reveal><span>05</span>Pour qui</p>
+            <h2 class="heading-lg" data-split>Pour tous les box, <mark>du poney au cheval de sport</mark>.</h2>
+          </header>
+          <ul class="audience__list">
+            <li class="audience__item" data-reveal style="--i:0">
+              <span class="audience__num">01</span>
+              <span class="audience__title">Chevaux sensibles</span>
+              <span class="audience__desc">Moins de poussière dans le box, pour des voies respiratoires fragiles.</span>
+            </li>
+            <li class="audience__item" data-reveal style="--i:1">
+              <span class="audience__num">02</span>
+              <span class="audience__title">Chevaux de sport</span>
+              <span class="audience__desc">Un couchage sec et souple pour bien récupérer après l’effort.</span>
+            </li>
+            <li class="audience__item" data-reveal style="--i:2">
+              <span class="audience__num">03</span>
+              <span class="audience__title">Poulinières &amp; poulains</span>
+              <span class="audience__desc">Une litière douce, propre, et qui ne se mange pas.</span>
+            </li>
+            <li class="audience__item" data-reveal style="--i:3">
+              <span class="audience__num">04</span>
+              <span class="audience__title">Centres équestres</span>
+              <span class="audience__desc">Moins de volume à stocker, moins de fumier à évacuer.</span>
+            </li>
+            <li class="audience__item" data-reveal style="--i:4">
+              <span class="audience__num">05</span>
+              <span class="audience__title">Écuries de propriétaires</span>
+              <span class="audience__desc">Des box plus simples à entretenir, jour après jour.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ 06 — Petits animaux (NAC) ============ -->
+      <section class="section nac" id="nac">
+        <div class="container nac__grid">
+          <figure class="photo nac__photo" data-photo>
+            <div class="photo__media" data-speed="-0.05">
+              <img src="assets/img/photos/sequoria-nac-sac.jpg" alt="Un sac de 2 kg de litière Séquoria pour petits animaux, devant une étagère avec un clapier et une cage" width="1407" height="768" loading="lazy" decoding="async">
+            </div>
+          </figure>
+          <div class="nac__content">
+            <p class="kicker" data-reveal><span>06</span>Petits animaux</p>
+            <h2 class="heading-lg" data-split>La même litière, <mark>pour les NAC</mark>.</h2>
+            <p class="nac__text" data-reveal>Séquoria existe aussi en sac de 2&nbsp;kg pour les cages, clapiers et poulaillers. La même litière en carton, dépoussiérée et très absorbante, pensée pour les nouveaux animaux de compagnie.</p>
+            <ul class="nac__animals" aria-label="Animaux concernés" data-reveal>
+              <li>Lapins</li>
+              <li>Cochons d’Inde</li>
+              <li>Hamsters</li>
+              <li>Rats &amp; souris</li>
+              <li>Poules</li>
+            </ul>
+            <p class="nac__meta" data-reveal>Sac de 2&nbsp;kg · Absorption rapide · Dépoussiérée · Compostable</p>
+            <div class="nac__actions" data-reveal>
+              <a class="btn btn--ghost" href="litiere-nac/" data-magnetic>
+                <span class="btn__label" data-roll>Découvrir la litière NAC</span>
+                <span class="btn__icon" aria-hidden="true"><svg><use href="#i-arrow"/></svg><svg><use href="#i-arrow"/></svg></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 07 — FAQ ============ -->
+      <section class="section faq" id="faq">
+        <div class="container container--narrow">
+          <header class="section-head center">
+            <p class="kicker" data-reveal><span>07</span>Questions fréquentes</p>
+            <h2 class="heading-lg" data-split>Ce que l’on nous demande <mark>le plus souvent</mark>.</h2>
+          </header>
+          <div class="faq__list">
+            <div class="faq__item" data-reveal style="--i:0">
+              <h3 class="faq__h"><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-a1" id="faq-q1"><span>Mon cheval va-t-il manger sa litière&nbsp;?</span><span class="faq__icon" aria-hidden="true"></span></button></h3>
+              <div class="faq__a" id="faq-a1" role="region" aria-labelledby="faq-q1"><div class="faq__a-inner"><p>C’est rare&nbsp;: le carton n’a ni goût ni odeur attirante, contrairement à la paille. Observez simplement votre cheval les premiers jours, comme pour tout changement de litière.</p></div></div>
+            </div>
+            <div class="faq__item" data-reveal style="--i:1">
+              <h3 class="faq__h"><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-a2" id="faq-q2"><span>Combien de balles faut-il pour un box&nbsp;?</span><span class="faq__icon" aria-hidden="true"></span></button></h3>
+              <div class="faq__a" id="faq-a2" role="region" aria-labelledby="faq-q2"><div class="faq__a-inner"><p>Comptez en moyenne 6 à 8 balles pour la mise en place d’un box de 3&nbsp;×&nbsp;3&nbsp;m, puis 1 à 2 balles par semaine. Les besoins varient selon le cheval et le temps qu’il passe au box.</p></div></div>
+            </div>
+            <div class="faq__item" data-reveal style="--i:2">
+              <h3 class="faq__h"><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-a3" id="faq-q3"><span>Convient-elle à un cheval qui tousse&nbsp;?</span><span class="faq__icon" aria-hidden="true"></span></button></h3>
+              <div class="faq__a" id="faq-a3" role="region" aria-labelledby="faq-q3"><div class="faq__a-inner"><p>Dépoussiérée, elle est souvent choisie pour les chevaux sensibles des voies respiratoires. Pour un cheval souffrant d’asthme équin, demandez toujours conseil à votre vétérinaire.</p></div></div>
+            </div>
+            <div class="faq__item" data-reveal style="--i:3">
+              <h3 class="faq__h"><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-a4" id="faq-q4"><span>Que faire du fumier&nbsp;?</span><span class="faq__icon" aria-hidden="true"></span></button></h3>
+              <div class="faq__a" id="faq-a4" role="region" aria-labelledby="faq-q4"><div class="faq__a-inner"><p>Il se composte rapidement et s’épand sur prairies, cultures ou potagers. Un agriculteur ou un maraîcher voisin sera souvent ravi de le récupérer.</p></div></div>
+            </div>
+            <div class="faq__item" data-reveal style="--i:4">
+              <h3 class="faq__h"><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-a5" id="faq-q5"><span>Comment stocker les balles&nbsp;?</span><span class="faq__icon" aria-hidden="true"></span></button></h3>
+              <div class="faq__a" id="faq-a5" role="region" aria-labelledby="faq-q5"><div class="faq__a-inner"><p>Au sec et à l’abri de la pluie, idéalement sur palette. Compressées, elles prennent bien moins de place qu’un stock de paille.</p></div></div>
+            </div>
+            <div class="faq__item" data-reveal style="--i:5">
+              <h3 class="faq__h"><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-a6" id="faq-q6"><span>Existe-t-il une litière Séquoria pour les NAC&nbsp;?</span><span class="faq__icon" aria-hidden="true"></span></button></h3>
+              <div class="faq__a" id="faq-a6" role="region" aria-labelledby="faq-q6"><div class="faq__a-inner"><p>Oui&nbsp;: Séquoria existe en sac de 2&nbsp;kg pour les lapins, cochons d’Inde, hamsters, rats ou souris. C’est la même litière en carton, dépoussiérée et très absorbante, dans un format adapté aux cages et aux clapiers.</p></div></div>
+            </div>
+            <div class="faq__item" data-reveal style="--i:6">
+              <h3 class="faq__h"><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-a7" id="faq-q7"><span>Peut-on l’utiliser dans un poulailler&nbsp;?</span><span class="faq__icon" aria-hidden="true"></span></button></h3>
+              <div class="faq__a" id="faq-a7" role="region" aria-labelledby="faq-q7"><div class="faq__a-inner"><p>Oui. Étalée en couche épaisse au sol ou dans les pondoirs, elle absorbe l’humidité des fientes et limite les odeurs, puis se composte avec elles au jardin.</p></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 08 — Contact ============ -->
+      <section class="section cta" id="contact">
+        <div class="container cta__grid">
+          <div class="cta__content">
+            <p class="kicker" data-reveal><span>08</span>Passer au carton</p>
+            <h2 class="display" data-split>Offrez-lui un box <em>qui respire.</em></h2>
+            <p class="cta__text" data-reveal>Dites-nous combien de chevaux vous accueillez&nbsp;: nous revenons vers vous avec un devis sur mesure.</p>
+            <div class="cta__actions" data-reveal>
+              <a class="btn btn--primary btn--lg" href="contact/" data-magnetic>
+                <span class="btn__label" data-roll>Demander un devis</span>
+                <span class="btn__icon" aria-hidden="true"><svg><use href="#i-arrow"/></svg><svg><use href="#i-arrow"/></svg></span>
+              </a>
+            </div>
+            <p class="cta__small" data-reveal>ou écrivez-nous à <a class="link" href="mailto:contact@example.com">contact@example.com</a></p>
+          </div>
+          <figure class="photo cta__photo" data-photo>
+            <div class="photo__media" data-speed="-0.06">
+              <picture>
+                <source type="image/avif" srcset="assets/img/photos/sequoria-balles-nature.avif">
+                <img src="assets/img/photos/sequoria-balles-nature.jpg" alt="Deux balles de litière Séquoria posées dans l’herbe, devant une clôture et des montagnes" width="1101" height="1376" loading="lazy" decoding="async">
+              </picture>
+            </div>
+          </figure>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ============ Pied de page ============ -->
+  <footer class="footer" data-footer>
+    <canvas class="footer__canvas" data-ribbon="footer" aria-hidden="true"></canvas>
+    <div class="footer__inner container">
+      <div class="footer__grid">
+        <p class="footer__tagline">Du carton au box,<br><em>du box au champ.</em></p>
+        <nav class="footer__col" aria-label="Plan du site">
+          <p class="footer__label">Litière</p>
+          <ul>
+            <li><a href="litiere-chevaux/" data-roll>Litière chevaux</a></li>
+            <li><a href="litiere-nac/" data-roll>Petits animaux</a></li>
+            <li><a href="#usage" data-roll>Mode d’emploi</a></li>
+            <li><a href="#faq" data-roll>Questions</a></li>
+          </ul>
+        </nav>
+        <div class="footer__col">
+          <p class="footer__label">Contact</p>
+          <ul>
+            <li><a href="mailto:contact@example.com" data-roll>contact@example.com</a></li>
+            <li><a href="contact/" data-roll>Demander un devis</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__label">Suivre</p>
+          <!-- Remplacez « # » par l’adresse de vos comptes. -->
+          <ul>
+            <li><a href="#" data-roll>Instagram</a></li>
+            <li><a href="#" data-roll>Facebook</a></li>
+            <li><a href="#" data-roll>LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer__brand" aria-hidden="true">Séquoria</p>
+      <div class="footer__bottom">
+        <p>© <span data-year>2026</span> Séquoria — Litière en carton recyclé</p>
+        <ul>
+          <li><a href="mentions-legales/" data-roll>Mentions légales</a></li>
+          <li><a href="confidentialite/" data-roll>Confidentialité</a></li>
+          <li><a href="#top" data-roll>Haut de page ↑</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
