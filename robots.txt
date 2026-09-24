@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dynaspley.github.io/Litiere/sitemap.xml
+Sitemap: https://dynaspley.github.io/Sequoria/sitemap.xml

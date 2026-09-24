@@ -54,17 +54,17 @@ une modification de ces blocs est à reporter dans les sept fichiers HTML.
 
 ## Mise en ligne avec GitHub Pages
 
-Le site est prêt à être publié à l’adresse **https://dynaspley.github.io/Litiere/** :
+Le site est prêt à être publié à l’adresse **https://dynaspley.github.io/Sequoria/** :
 
 1. Envoyer le dépôt sur GitHub (dans GitHub Desktop : **Push origin**).
-2. Sur github.com, dans le dépôt : **Settings → Pages**, source « Deploy from a branch », branche `main`, dossier `/ (root)`, puis **Save**.
+2. Sur github.com, dans le dépôt « Sequoria » : **Settings → Pages**, source « Deploy from a branch », branche `main`, dossier `/ (root)`, puis **Save**.
 3. Après une à deux minutes, le site est en ligne : c’est ce lien qu’il suffit de partager.
 
 Avec un compte GitHub gratuit, GitHub Pages ne fonctionne que si le dépôt est **public**
 (Settings → General → Danger Zone → Change repository visibility).
 
-Pour passer plus tard sur votre propre nom de domaine : remplacer `https://dynaspley.github.io/Litiere/`
-dans les pages (balises `canonical` et `og:`), `robots.txt` et `sitemap.xml`, et `/Litiere/` par `/` dans `404.html`.
+Pour passer plus tard sur votre propre nom de domaine : remplacer `https://dynaspley.github.io/Sequoria/`
+dans les pages (balises `canonical` et `og:`), `robots.txt` et `sitemap.xml`, et `/Sequoria/` par `/` dans `404.html`.
 Le fichier `.nojekyll` demande à GitHub de publier les fichiers tels quels.
 
 Après chaque modification du CSS ou du JS, incrémentez le `?v=` de leurs liens dans les pages pour éviter que les visiteurs gardent l’ancienne version en cache.
