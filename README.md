@@ -45,7 +45,6 @@ une modification de ces blocs est à reporter dans les sept fichiers HTML.
 ## À compléter avant la mise en ligne
 
 - **Mentions légales et confidentialité** : les informations surlignées (raison sociale, SIRET, hébergeur…) sont à remplir, puis retirer la classe `todo`.
-- **Nom de domaine** : remplacer `https://www.example.com` par votre domaine dans les pages (balises `canonical` et `og:`), `robots.txt` et `sitemap.xml`.
 - **Adresse e-mail** : remplacer `contact@example.com` dans toutes les pages.
 - **Formulaire de devis** : sans configuration, il ouvre la messagerie du visiteur avec la demande pré-remplie. Pour recevoir les demandes directement, créez un formulaire chez un service comme Formspree et renseignez son adresse dans l’attribut `data-endpoint` du formulaire (`contact/index.html`).
 - **Réseaux sociaux** : remplacer les liens `#` du pied de page.
@@ -53,10 +52,20 @@ une modification de ces blocs est à reporter dans les sept fichiers HTML.
 - **Logo** : la navigation affiche le nom en texte ; vous pouvez y placer votre logo (SVG).
 - **Polices** : chargées depuis Google Fonts (Instrument Serif, Fraunces). Pour le RGPD, vous pouvez les héberger sur le site.
 
-## Mise en ligne
+## Mise en ligne avec GitHub Pages
 
-N’importe quel hébergement de fichiers statiques convient (GitHub Pages, Netlify, OVH…).
-La page `404.html` utilise des chemins absolus (`/assets/…`) : elle fonctionne quand le site est à la racine du domaine.
+Le site est prêt à être publié à l’adresse **https://dynaspley.github.io/Litiere/** :
+
+1. Envoyer le dépôt sur GitHub (dans GitHub Desktop : **Push origin**).
+2. Sur github.com, dans le dépôt : **Settings → Pages**, source « Deploy from a branch », branche `main`, dossier `/ (root)`, puis **Save**.
+3. Après une à deux minutes, le site est en ligne : c’est ce lien qu’il suffit de partager.
+
+Avec un compte GitHub gratuit, GitHub Pages ne fonctionne que si le dépôt est **public**
+(Settings → General → Danger Zone → Change repository visibility).
+
+Pour passer plus tard sur votre propre nom de domaine : remplacer `https://dynaspley.github.io/Litiere/`
+dans les pages (balises `canonical` et `og:`), `robots.txt` et `sitemap.xml`, et `/Litiere/` par `/` dans `404.html`.
+Le fichier `.nojekyll` demande à GitHub de publier les fichiers tels quels.
 
 Après chaque modification du CSS ou du JS, incrémentez le `?v=` de leurs liens dans les pages pour éviter que les visiteurs gardent l’ancienne version en cache.
 
