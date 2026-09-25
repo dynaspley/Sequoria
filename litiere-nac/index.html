@@ -21,13 +21,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..500,0..100,0..1&family=Instrument+Serif:ital@0;1&display=swap">
-  <link rel="stylesheet" href="../assets/css/style.css?v=22">
+  <link rel="stylesheet" href="../assets/css/style.css?v=25">
   <script>
     document.documentElement.classList.add('js');
     // Filet de sécurité : si le script principal ne se charge pas, tout le contenu reste visible.
     setTimeout(function () { if (!window.siteReady) document.documentElement.classList.remove('js'); }, 3000);
   </script>
-  <script src="../assets/js/main.js?v=22" defer></script>
+  <script src="../assets/js/main.js?v=25" defer></script>
 </head>
 <body>
   <svg class="sprite" aria-hidden="true" focusable="false">
@@ -202,11 +202,30 @@
         </div>
       </section>
 
+      <!-- ============ Appel à l'action ============ -->
+      <section class="section">
+        <div class="container">
+          <div class="page-cta">
+            <p class="kicker" data-reveal><span>04</span>Passer au carton</p>
+            <h2 class="display" data-split>Un sac de 2&nbsp;kg, <em>tout simplement.</em></h2>
+            <p class="page-cta__text" data-reveal>Dites-nous quels animaux vous accueillez&nbsp;: nous vous indiquons où trouver Séquoria ou vous envoyons un devis.</p>
+            <div class="page-cta__actions" data-reveal>
+            <a class="btn btn--primary btn--lg" href="../contact/?produit=nac" data-magnetic>
+              <span class="btn__label" data-roll>Demander le format NAC</span><span class="btn__icon" aria-hidden="true"><svg><use href="#i-arrow"/></svg><svg><use href="#i-arrow"/></svg></span>
+            </a>
+            <a class="btn btn--ghost btn--lg" href="../litiere-chevaux/" data-magnetic>
+              <span class="btn__label" data-roll>Voir la litière chevaux</span>
+            </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- ============ Questions ============ -->
       <section class="section faq" id="faq">
         <div class="container container--narrow">
           <header class="section-head center">
-            <p class="kicker" data-reveal><span>04</span>Questions fréquentes</p>
+            <p class="kicker" data-reveal><span>05</span>Questions fréquentes</p>
             <h2 class="heading-lg" data-split>Les réponses <mark>pour les petits animaux</mark>.</h2>
           </header>
           <div class="faq__list">
@@ -225,25 +244,6 @@
           </div>
         </div>
       </section>
-
-      <!-- ============ Appel à l'action ============ -->
-      <section class="section">
-        <div class="container">
-          <div class="page-cta">
-            <p class="kicker" data-reveal><span>05</span>Passer au carton</p>
-            <h2 class="display" data-split>Un sac de 2&nbsp;kg, <em>tout simplement.</em></h2>
-            <p class="page-cta__text" data-reveal>Dites-nous quels animaux vous accueillez&nbsp;: nous vous indiquons où trouver Séquoria ou vous envoyons un devis.</p>
-            <div class="page-cta__actions" data-reveal>
-            <a class="btn btn--primary btn--lg" href="../contact/?produit=nac" data-magnetic>
-              <span class="btn__label" data-roll>Demander le format NAC</span><span class="btn__icon" aria-hidden="true"><svg><use href="#i-arrow"/></svg><svg><use href="#i-arrow"/></svg></span>
-            </a>
-            <a class="btn btn--ghost btn--lg" href="../litiere-chevaux/" data-magnetic>
-              <span class="btn__label" data-roll>Voir la litière chevaux</span>
-            </a>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   </main>
 
@@ -252,7 +252,10 @@
     <canvas class="footer__canvas" data-ribbon="footer" aria-hidden="true"></canvas>
     <div class="footer__inner container">
       <div class="footer__grid">
-        <p class="footer__tagline">Du carton au box,<br><em>du box au champ.</em></p>
+        <div class="footer__intro">
+          <p class="footer__tagline">Du carton au box,<br><em>du box au champ.</em></p>
+          <p class="footer__brand" aria-hidden="true">Séquoria</p>
+        </div>
         <nav class="footer__col" aria-label="Plan du site">
           <p class="footer__label">Litière</p>
           <ul>
@@ -280,7 +283,6 @@
           </ul>
         </div>
       </div>
-      <p class="footer__brand" aria-hidden="true">Séquoria</p>
       <div class="footer__bottom">
         <p>© <span data-year>2026</span> Séquoria — Litière en carton recyclé</p>
         <ul>

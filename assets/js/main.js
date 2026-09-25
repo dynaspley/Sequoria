@@ -446,13 +446,15 @@
       height = body.offsetHeight;
     });
     tickers.add(() => {
-      const start = top - scroll.vh * 0.8;
-      const end = top + height - scroll.vh * 0.5;
+      // La progression s'achève quand le bas des étapes atteint 80 % de la
+      // hauteur de l'écran : la dernière étape s'allume dès qu'elle est lisible.
+      const start = top - scroll.vh * 0.85;
+      const end = top + height - scroll.vh * 0.8;
       const p = reduceMotion ? 1 : clamp((scroll.y - start) / (end - start));
       if (p === last) return;
       last = p;
       body.style.setProperty('--p', p.toFixed(4));
-      steps.forEach((step, i) => step.classList.toggle('is-active', p >= (i + 0.2) / steps.length));
+      steps.forEach((step, i) => step.classList.toggle('is-active', p >= (i / steps.length) * 0.8 + 0.05));
     });
   }
 
@@ -620,7 +622,7 @@
       output.textContent = boxes;
       write(outs.setup, `${number(boxes * 6)} à ${number(boxes * 8)}`);
       write(outs.month, number(month));
-      write(outs.kg, `${number(month * 20)}\u00a0kg`);
+      write(outs.kg, `${number(month * 18)}\u00a0kg`);
     };
     range.addEventListener('input', update);
     rhythms.forEach((radio) => radio.addEventListener('change', update));
@@ -635,7 +637,7 @@
     if (!form) return;
     const status = $('[data-form-status]', form);
     const products = {
-      chevaux: 'Litière chevaux (20 kg)',
+      chevaux: 'Litière chevaux (18 kg)',
       nac: 'Litière petits animaux (2 kg)',
       'les-deux': 'Litière chevaux et petits animaux',
     };
@@ -744,36 +746,85 @@
     });
   }
 
-  /* Compteurs des chiffres clés. */
+  /* Chiffres clés en rouleaux : chaque chiffre défile jusqu'à sa valeur quand
+     sa carte apparaît, puis refait un tour au survol sur ordinateur.
+     Un rouleau contient trois fois 0 à 9 : il se pose au 2e tour, le survol
+     l'amène au 3e, puis il revient sans animation au 2e (même chiffre affiché). */
   function initCounters() {
     const counters = $$('[data-count]');
     if (reduceMotion || !counters.length || !('IntersectionObserver' in window)) return;
-    const format = (value, decimals) => value.toLocaleString('fr-FR', {
-      minimumFractionDigits: decimals,
-      maximumFractionDigits: decimals,
+
+    const items = counters.map((el, index) => {
+      const text = el.textContent.trim();
+      const label = document.createElement('span');
+      label.className = 'sr-only';
+      label.textContent = text;
+      const odo = document.createElement('span');
+      odo.className = 'odo';
+      odo.setAttribute('aria-hidden', 'true');
+      const reels = [];
+      [...text].forEach((char) => {
+        if (!/\d/.test(char)) {
+          odo.append(char);
+          return;
+        }
+        const digit = document.createElement('span');
+        const final = document.createElement('span');
+        const reel = document.createElement('span');
+        digit.className = 'odo__digit';
+        final.className = 'odo__final';
+        reel.className = 'odo__reel';
+        final.textContent = char;
+        for (let i = 0; i < 30; i++) {
+          const figure = document.createElement('span');
+          figure.textContent = String(i % 10);
+          reel.append(figure);
+        }
+        digit.append(final, reel);
+        odo.append(digit);
+        reels.push({ reel, value: Number(char) });
+      });
+      el.textContent = '';
+      el.append(label, odo);
+      return { card: el.closest('.stat') || el, reels, index, busy: false };
     });
+
+    // Les chiffres se posent de gauche à droite : le dernier tourne le plus longtemps.
+    const spin = (item, turn, duration, delay = 0) => {
+      item.reels.forEach(({ reel, value }, j) => {
+        reel.style.setProperty('--dur', `${duration + j * 0.25}s`);
+        reel.style.setProperty('--delay', `${delay}s`);
+        reel.style.setProperty('--k', String(turn * 10 + value));
+      });
+    };
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
         observer.unobserve(entry.target);
-        const el = entry.target;
-        const target = parseFloat(el.dataset.count);
-        const decimals = (el.dataset.count.split('.')[1] || '').length;
-        const delay = counters.indexOf(el) * 90 + 150;
-        setTimeout(() => {
-          const start = performance.now();
-          const step = (now) => {
-            const k = clamp((now - start) / 1800);
-            el.textContent = format(target * (1 - Math.pow(1 - k, 4)), decimals);
-            if (k < 1) requestAnimationFrame(step);
-          };
-          requestAnimationFrame(step);
-        }, delay);
+        const item = items.find((candidate) => candidate.card === entry.target);
+        if (item) spin(item, 1, 1.6, 0.15 + item.index * 0.12);
       });
-    }, { threshold: 0.6 });
-    counters.forEach((el) => {
-      el.textContent = format(0, (el.dataset.count.split('.')[1] || '').length);
-      observer.observe(el);
+    }, { threshold: 0.5 });
+    items.forEach((item) => observer.observe(item.card));
+
+    if (!finePointer) return;
+    items.forEach((item) => {
+      item.card.addEventListener('pointerenter', () => {
+        if (item.busy || !item.reels.length) return;
+        item.busy = true;
+        spin(item, 2, 1);
+        const total = (1 + (item.reels.length - 1) * 0.25) * 1000 + 80;
+        setTimeout(() => {
+          item.reels.forEach(({ reel, value }) => {
+            reel.classList.add('is-reset');
+            reel.style.setProperty('--k', String(10 + value));
+          });
+          item.card.getBoundingClientRect();
+          item.reels.forEach(({ reel }) => reel.classList.remove('is-reset'));
+          item.busy = false;
+        }, total);
+      });
     });
   }
 

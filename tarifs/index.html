@@ -21,13 +21,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..500,0..100,0..1&family=Instrument+Serif:ital@0;1&display=swap">
-  <link rel="stylesheet" href="../assets/css/style.css?v=22">
+  <link rel="stylesheet" href="../assets/css/style.css?v=25">
   <script>
     document.documentElement.classList.add('js');
     // Filet de sécurité : si le script principal ne se charge pas, tout le contenu reste visible.
     setTimeout(function () { if (!window.siteReady) document.documentElement.classList.remove('js'); }, 3000);
   </script>
-  <script src="../assets/js/main.js?v=22" defer></script>
+  <script src="../assets/js/main.js?v=25" defer></script>
 </head>
 <body>
   <svg class="sprite" aria-hidden="true" focusable="false">
@@ -108,50 +108,49 @@
       <section class="section" id="grille">
         <div class="container">
           <header class="section-head center">
-            <p class="kicker" data-reveal><span>01</span>Litière chevaux</p>
             <h2 class="heading-lg" data-split>Plus vous commandez, <mark>moins vous payez</mark>.</h2>
           </header>
-        </div>
-        <!-- Grille communiquée par Séquoria : modifiez les prix directement dans ce tableau. -->
-        <div class="pricing" data-reveal>
-          <table class="pricing__table">
-            <caption class="sr-only">Tarifs de la litière chevaux Séquoria selon la quantité commandée, hors taxes</caption>
-            <thead>
-              <tr>
-                <th scope="col">Type de lot</th>
-                <th scope="col">Prix du kg <abbr title="hors taxes">HT</abbr></th>
-                <th scope="col">Prix du sac <abbr title="hors taxes">HT</abbr></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr style="--r:0">
-                <th scope="row">Entre 1 et 4 palettes</th>
-                <td data-label="Prix du kg HT">0,500&nbsp;€</td>
-                <td data-label="Prix du sac HT">9,00&nbsp;€</td>
-              </tr>
-              <tr style="--r:1">
-                <th scope="row">Entre 5 et 9 palettes</th>
-                <td data-label="Prix du kg HT">0,480&nbsp;€</td>
-                <td data-label="Prix du sac HT">8,64&nbsp;€</td>
-              </tr>
-              <tr style="--r:2">
-                <th scope="row">Entre 10 et 14 palettes</th>
-                <td data-label="Prix du kg HT">0,450&nbsp;€</td>
-                <td data-label="Prix du sac HT">8,10&nbsp;€</td>
-              </tr>
-              <tr style="--r:3">
-                <th scope="row">Entre 15 et 21 palettes</th>
-                <td data-label="Prix du kg HT">0,420&nbsp;€</td>
-                <td data-label="Prix du sac HT">7,56&nbsp;€</td>
-              </tr>
-              <tr class="is-best" style="--r:4">
-                <th scope="row">Camion complet (22 palettes) <span class="tag">Meilleur prix</span></th>
-                <td data-label="Prix du kg HT">0,380&nbsp;€</td>
-                <td data-label="Prix du sac HT">6,84&nbsp;€</td>
-              </tr>
-            </tbody>
-          </table>
-          <p class="pricing__note container">Prix hors taxes.</p>
+          <!-- Grille communiquée par Séquoria : modifiez les prix directement dans ce tableau. -->
+          <div class="pricing" data-reveal>
+            <table class="pricing__table">
+              <caption class="sr-only">Tarifs de la litière chevaux Séquoria selon la quantité commandée, hors taxes</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Type de lot</th>
+                  <th scope="col">Prix du kg <abbr title="hors taxes">HT</abbr></th>
+                  <th scope="col">Prix du sac <abbr title="hors taxes">HT</abbr></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="--r:0">
+                  <th scope="row">Entre 1 et 4 palettes</th>
+                  <td data-label="Prix du kg HT">0,500&nbsp;€</td>
+                  <td data-label="Prix du sac HT">9,00&nbsp;€</td>
+                </tr>
+                <tr style="--r:1">
+                  <th scope="row">Entre 5 et 9 palettes</th>
+                  <td data-label="Prix du kg HT">0,480&nbsp;€</td>
+                  <td data-label="Prix du sac HT">8,64&nbsp;€</td>
+                </tr>
+                <tr style="--r:2">
+                  <th scope="row">Entre 10 et 14 palettes</th>
+                  <td data-label="Prix du kg HT">0,450&nbsp;€</td>
+                  <td data-label="Prix du sac HT">8,10&nbsp;€</td>
+                </tr>
+                <tr style="--r:3">
+                  <th scope="row">Entre 15 et 21 palettes</th>
+                  <td data-label="Prix du kg HT">0,420&nbsp;€</td>
+                  <td data-label="Prix du sac HT">7,56&nbsp;€</td>
+                </tr>
+                <tr class="is-best" style="--r:4">
+                  <th scope="row">Camion complet (22 palettes) <span class="tag">Meilleur prix</span></th>
+                  <td data-label="Prix du kg HT">0,380&nbsp;€</td>
+                  <td data-label="Prix du sac HT">6,84&nbsp;€</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="pricing__note">Prix hors taxes.</p>
+          </div>
         </div>
       </section>
 
@@ -165,7 +164,7 @@
                 </div>
               </figure>
             <div class="intro-card__content">
-              <p class="kicker" data-reveal><span>02</span>Petits animaux</p>
+              <p class="kicker" data-reveal><span>01</span>Petits animaux</p>
               <h2 class="heading-lg statement" data-split>Le sac de 2&nbsp;kg, <mark>tarifs sur demande</mark>.</h2>
               <p class="manifesto__text" data-reveal>Pour les lapins, rongeurs et volailles, la litière Séquoria existe en sac de 2&nbsp;kg. Dites-nous les quantités souhaitées&nbsp;: nous vous répondons avec un tarif adapté.</p>
               <div data-reveal>
@@ -182,7 +181,7 @@
       <section class="section">
         <div class="container">
           <div class="page-cta">
-            <p class="kicker" data-reveal><span>03</span>Passer au carton</p>
+            <p class="kicker" data-reveal><span>02</span>Passer au carton</p>
             <h2 class="display" data-split>Une commande <em>en tête&nbsp;?</em></h2>
             <p class="page-cta__text" data-reveal>Indiquez-nous les quantités souhaitées et votre code postal&nbsp;: nous vous envoyons un devis détaillé.</p>
             <div class="page-cta__actions" data-reveal>
@@ -204,7 +203,10 @@
     <canvas class="footer__canvas" data-ribbon="footer" aria-hidden="true"></canvas>
     <div class="footer__inner container">
       <div class="footer__grid">
-        <p class="footer__tagline">Du carton au box,<br><em>du box au champ.</em></p>
+        <div class="footer__intro">
+          <p class="footer__tagline">Du carton au box,<br><em>du box au champ.</em></p>
+          <p class="footer__brand" aria-hidden="true">Séquoria</p>
+        </div>
         <nav class="footer__col" aria-label="Plan du site">
           <p class="footer__label">Litière</p>
           <ul>
@@ -232,7 +234,6 @@
           </ul>
         </div>
       </div>
-      <p class="footer__brand" aria-hidden="true">Séquoria</p>
       <div class="footer__bottom">
         <p>© <span data-year>2026</span> Séquoria — Litière en carton recyclé</p>
         <ul>
